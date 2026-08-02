@@ -1,0 +1,13 @@
+/target/
+**/*.rs.bk
+Cargo.lock
+.idea/
+.vscode/
+*.pdb
+*.dll
+*.so
+*.dylib
+native/
+prebuilt/
+.ccls-cache/
+.env

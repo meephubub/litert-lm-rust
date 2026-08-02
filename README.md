@@ -1,0 +1,131 @@
+# litert-lm-rust
+
+Safe, idiomatic Rust bindings for [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) — Google's on-device LLM runtime.
+
+This crate wraps the stable **C API** (`c/engine.h`), which is the supported FFI surface for the C++ Conversation / Engine stack described in [`litert.md`](./litert.md).
+
+## Features
+
+| Feature | Support |
+| --- | --- |
+| Conversation API (`send_message` / streaming) | ✅ |
+| Multimodal (vision + audio backends, image/audio parts) | ✅ |
+| **MTP** (Multi-Token Prediction / speculative decoding) | ✅ |
+| Session API (prefill / decode / generate_content) | ✅ |
+| Tools, thinking, constrained decoding, LoRA, benchmarks | ✅ |
+
+## Install
+
+```toml
+[dependencies]
+litert-lm-rust = "0.1"
+```
+
+You must also link a built LiteRT-LM C shared library (see below).
+
+## Quick start
+
+```rust
+use litert_lm_rust::{Backend, Engine, Message};
+
+fn main() -> litert_lm_rust::Result<()> {
+    let engine = Engine::builder("model.litertlm")
+        .backend(Backend::Cpu)
+        .build()?;
+    let mut conversation = engine.create_conversation(Default::default())?;
+    let reply = conversation.send_message(Message::user("Hello!"))?;
+    println!("{reply}");
+    Ok(())
+}
+```
+
+### Multimodal
+
+```rust
+use litert_lm_rust::{Backend, ContentPart, Engine, Message};
+
+let engine = Engine::builder("gemma.litertlm")
+    .backend(Backend::Cpu)
+    .vision_backend(Backend::Gpu)
+    .audio_backend(Backend::Cpu)
+    .build()?;
+
+let mut conversation = engine.create_conversation(Default::default())?;
+let reply = conversation.send_message(Message::user_parts([
+    ContentPart::text("Describe this image:"),
+    ContentPart::image_path("photo.jpg"),
+])?)?;
+```
+
+### MTP (Multi-Token Prediction)
+
+```rust
+let engine = Engine::builder("model.litertlm")
+    .backend(Backend::Gpu)
+    .multi_token_prediction(true) // enable_speculative_decoding
+    .build()?;
+```
+
+## Native library
+
+Build the LiteRT-LM C API from source:
+
+```bash
+git clone https://github.com/google-ai-edge/LiteRT-LM
+cd LiteRT-LM
+git checkout <release-tag>   # e.g. v0.14.0
+bazel build //c:engine
+```
+
+Then point this crate at the output:
+
+```bash
+# Linux
+export LITERT_LM_LIB_DIR=$PWD/bazel-bin/c
+export LITERT_LM_LIB_NAME=engine
+
+# Windows (PowerShell)
+$env:LITERT_LM_LIB_DIR = "C:\path\to\bazel-bin\c"
+$env:LITERT_LM_LIB_NAME = "engine"
+```
+
+Alternatively, place the shared library in this crate's `c/`, `native/`, or `prebuilt/` folder.
+
+| Variable | Meaning |
+| --- | --- |
+| `LITERT_LM_LIB_DIR` | Directory containing the shared library |
+| `LITERT_LM_LIB_NAME` | Library name without `lib` / extension (default tries `LiteRtLmC` / `engine`) |
+| `LITERT_LM_STATIC` | If set, link statically |
+| `LITERT_LM_INCLUDE_DIR` | Override header path (defaults to vendored `c/`) |
+
+The `c/` directory also vendors the LiteRT C/C++ SDK headers used when building LiteRT-LM itself.
+
+## Examples
+
+```bash
+cargo run --example text_chat -- model.litertlm "Hello"
+cargo run --example multimodal -- model.litertlm photo.jpg
+cargo run --example mtp -- model.litertlm
+```
+
+## Regenerating bindings
+
+```bash
+cargo build --features bindgen,docs-only
+```
+
+This updates `src/bindings.rs` from `c/wrapper.h` / `c/engine.h`.
+
+## Publish
+
+```bash
+cargo publish --dry-run
+# requires network + crates.io token for a real publish:
+# cargo publish
+```
+
+Docs builds use `--features docs-only` so they do not need a local native library.
+
+## License
+
+Apache-2.0. LiteRT-LM headers and runtime are © The ODML Authors / Google LLC under Apache-2.0.
