@@ -14,23 +14,29 @@ jobs:
       - name: Setup Bazelisk
         uses: bazelbuild/setup-bazelisk@v3
 
-      - name: Remove Android Toolchain Declarations
+      - name: Patch WORKSPACE Dependencies
         shell: powershell
         run: |
           $path = "WORKSPACE"
-          Write-Host "Removing Android declarations from $path..."
+          Write-Host "Patching WORKSPACE file..."
           $text = Get-Content $path -Raw
 
-          # Comment out android_ndk_repository and android_sdk_repository
+          # 1. Comment out android_ndk_repository and android_sdk_repository
           $text = $text -replace '(?s)android_ndk_repository\s*\([^)]*\)', '# android_ndk_repository disabled'
           $text = $text -replace '(?s)android_sdk_repository\s*\([^)]*\)', '# android_sdk_repository disabled'
 
-          # Comment out register_toolchains call referencing @androidndk
+          # 2. Comment out register_toolchains call referencing @androidndk
           $text = $text -replace '(?m)^(.*register_toolchains\(.*androidndk.*)$', '# $1'
 
-          Set-Content $path $text
-          Write-Host "Verifying WORKSPACE edits:"
-          Select-String -Path $path -Pattern "android"
+          # 3. Direct literal replace for the minizip sha256 checksum
+          $oldHash = "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23"
+          $newHash = "d8713d03d5995188244132707305f7e351050770ba89e7958f1acd6662115677"
+          $text = $text.Replace($oldHash, $newHash)
+
+          Set-Content -Path $path -Value $text
+
+          Write-Host "Verifying minizip hash patch state:"
+          Select-String -Path $path -Pattern $newHash
 
       - name: Build LiteRT-LM C API
         shell: powershell
