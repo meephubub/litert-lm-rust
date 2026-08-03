@@ -52,6 +52,16 @@ jobs:
             # Remove all sha256 attributes
             $text = $text -replace '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', ''
 
+            # Patch minizip source URL
+            $text = $text -replace `
+              'url\s*=\s*"https://zlib\.net/fossils/zlib-1\.3\.1\.tar\.gz"', `
+              'url = "https://codeload.github.com/madler/zlib/tar.gz/refs/tags/v1.3.1"'
+
+            # Patch GitHub archive strip prefix
+            $text = $text -replace `
+              'strip_prefix\s*=\s*"zlib-1\.3\.1/contrib/minizip"', `
+              'strip_prefix = "zlib-1.3.1/contrib/minizip"'
+
             Set-Content -Path $file.FullName -Value $text
           }
 
