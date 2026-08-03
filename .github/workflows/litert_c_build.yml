@@ -1,12 +1,10 @@
 name: Build LiteRT-LM Windows
-
 on:
   workflow_dispatch:
 
 jobs:
   build-windows:
     runs-on: windows-2022
-
     steps:
       - name: Checkout LiteRT-LM
         uses: actions/checkout@v4
@@ -16,35 +14,26 @@ jobs:
       - name: Setup Bazelisk
         uses: bazelbuild/setup-bazelisk@v3
 
-      - name: Stub Android dependencies
+      - name: Disable Android dependencies
         shell: powershell
         run: |
-          # Create an empty folder to trick the workspace syntax parser into passing validation
-          New-Item -ItemType Directory -Force -Path C:\dummy_android
-
           $path = "WORKSPACE"
-          Write-Host "Stubbing paths in $path..."
+          Write-Host "Removing Android SDK/NDK repository declarations in $path..."
           $text = Get-Content $path -Raw
-
-          # Supply a valid physical location to satisfy toolchain registration
-          $text = $text -replace `
-            'android_ndk_repository\(name = "androidndk"\)', `
-            'android_ndk_repository(name = "androidndk", path = "C:/dummy_android")'
-
-          $text = $text -replace `
-            'android_sdk_repository\(name = "androidsdk"\)', `
-            'android_sdk_repository(name = "androidsdk", path = "C:/dummy_android")'
-
+          # Strip out multi-line android_sdk_repository and android_ndk_repository workspace blocks entirely
+          $text = $text -replace '(?s)android_sdk_repository\s*\([^)]*\)', '# android_sdk_repository disabled'
+          $text = $text -replace '(?s)android_ndk_repository\s*\([^)]*\)', '# android_ndk_repository disabled'
           Set-Content $path $text
-          Write-Host "Checking patch state:"
-          Select-String -Path $path -Pattern "android_ndk_repository|android_sdk_repository"
+          Write-Host "Checking updated WORKSPACE state:"
+          Select-String -Path $path -Pattern "android"
 
       - name: Build LiteRT-LM C API
         shell: powershell
         run: |
-          # Enforce host platform builds explicitly to drop Android cross-compiling pipelines
+          # Enforce host platform builds explicitly and exclude Android targets
           bazelisk build //c:litert-lm `
             --config=windows `
+            --build_tag_filters=-android `
             --verbose_failures `
             --sandbox_debug `
             --keep_going
