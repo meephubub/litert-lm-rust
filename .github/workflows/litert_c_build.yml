@@ -1,10 +1,12 @@
 name: Build LiteRT-LM Windows
+
 on:
   workflow_dispatch:
 
 jobs:
   build-windows:
     runs-on: windows-2022
+
     steps:
       - name: Checkout LiteRT-LM
         uses: actions/checkout@v4
@@ -13,6 +15,7 @@ jobs:
 
       - name: Setup Bazelisk
         uses: bazelbuild/setup-bazelisk@v3
+
       - name: Enable Long Paths on Windows Host
         shell: powershell
         run: |
@@ -23,30 +26,55 @@ jobs:
             -PropertyType DWORD `
             -Force
 
-      - name: Patch WORKSPACE Dependencies
+      - name: Patch Bazel files
         shell: powershell
         run: |
-          $path = "WORKSPACE"
-          Write-Host "Patching WORKSPACE file..."
-          $text = Get-Content $path -Raw
+          Write-Host "Patching Bazel files recursively..."
 
-          # 1. Comment out android_ndk_repository and android_sdk_repository
-          $text = $text -replace '(?s)android_ndk_repository\s*\([^)]*\)', '# android_ndk_repository disabled'
-          $text = $text -replace '(?s)android_sdk_repository\s*\([^)]*\)', '# android_sdk_repository disabled'
+          $files = Get-ChildItem -Recurse -File |
+            Where-Object {
+              $_.Name -match '^WORKSPACE(\.bazel)?$' -or
+              $_.Extension -eq '.bzl'
+            }
 
-          # 2. Comment out register_toolchains call referencing @androidndk
-          $text = $text -replace '(?m)^(.*register_toolchains\(.*androidndk.*)$', '# $1'
+          foreach ($file in $files) {
+            Write-Host "Patching $($file.FullName)"
 
-          # 3. Strip sha256 lines so Bazel ignores archive checksum verification completely
-          $text = $text -replace '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', ''
+            $text = Get-Content $file.FullName -Raw
 
-          Set-Content -Path $path -Value $text
+            # Disable Android repositories
+            $text = $text -replace '(?s)android_ndk_repository\s*\([^)]*\)', '# android_ndk_repository disabled'
+            $text = $text -replace '(?s)android_sdk_repository\s*\([^)]*\)', '# android_sdk_repository disabled'
+
+            # Disable Android toolchain registration lines
+            $text = $text -replace '(?m)^.*register_toolchains\(.*androidndk.*$', '# android toolchains disabled'
+
+            # Remove all sha256 attributes
+            $text = $text -replace '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', ''
+
+            Set-Content -Path $file.FullName -Value $text
+          }
+
+      - name: Verify checksum removal
+        shell: powershell
+        run: |
+          $matches = Get-ChildItem -Recurse -File |
+            Where-Object {
+              $_.Name -match '^WORKSPACE(\.bazel)?$' -or
+              $_.Extension -eq '.bzl'
+            } |
+            Select-String 'sha256\s*='
+
+          if ($matches) {
+            Write-Host "Remaining sha256 lines:"
+            $matches
+          } else {
+            Write-Host "No sha256 lines remain in repository Bazel files."
+          }
 
       - name: Build LiteRT-LM C API
         shell: powershell
         run: |
-          # Use a short output path to prevent MAX_PATH truncation on Windows
-          # Cap concurrency (--jobs=2) to avoid MSVC running out of memory (OOM)
           bazelisk --output_user_root=C:\b build //c:litert-lm `
             --config=windows `
             --build_tag_filters=-android `
@@ -71,19 +99,23 @@ jobs:
         shell: powershell
         run: |
           New-Item -ItemType Directory -Force -Path output
+
           Copy-Item `
             bazel-bin\c\*.dll `
             output\ `
             -ErrorAction SilentlyContinue
+
           Copy-Item `
             bazel-bin\c\*.lib `
             output\ `
             -ErrorAction SilentlyContinue
+
           # LiteRT runtime dependencies
           Copy-Item `
             prebuilt\windows_x86_64\*.dll `
             output\ `
             -ErrorAction SilentlyContinue
+
           Write-Host "Final files:"
           Get-ChildItem output
 
