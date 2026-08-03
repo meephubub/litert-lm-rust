@@ -12,3 +12,4 @@ prebuilt/
 .ccls-cache/
 .env
 /LiteRT-LM/
+c/build/
