@@ -45,9 +45,9 @@ jobs:
           # Enforce host platform builds explicitly to drop Android cross-compiling pipelines
           bazelisk build //c:litert-lm `
             --config=windows `
-            '--platforms=@bazel_tools//platforms:x86_64' `
-            '--extra_execution_platforms=@bazel_tools//platforms:x86_64' `
-            --verbose_failures
+            --verbose_failures `
+            --sandbox_debug `
+            --keep_going
 
       - name: Locate build output
         shell: powershell
