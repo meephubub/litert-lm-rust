@@ -42,10 +42,11 @@ jobs:
       - name: Build LiteRT-LM C API
         shell: powershell
         run: |
-          # Replaced invalid @bazel_tools//platforms reference with standard @platforms target
+          # Enforce host platform builds explicitly to drop Android cross-compiling pipelines
           bazelisk build //c:litert-lm `
             --config=windows `
-            --platforms=@platforms//os:windows `
+            '--platforms=@bazel_tools//platforms:x86_64' `
+            '--extra_execution_platforms=@bazel_tools//platforms:x86_64' `
             --verbose_failures
 
       - name: Locate build output

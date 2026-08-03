@@ -13,3 +13,4 @@ prebuilt/
 .env
 /LiteRT-LM/
 c/build/
+litert_artifacts/
