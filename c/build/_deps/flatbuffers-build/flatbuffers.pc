@@ -1,0 +1,9 @@
+libdir=C:/Program Files (x86)/litert_cc_api/lib
+includedir=C:/Program Files (x86)/litert_cc_api/include
+
+Name: FlatBuffers
+Description: Memory Efficient Serialization Library
+Version: 25.9.23
+
+Libs: -L${libdir} -lflatbuffers
+Cflags: -I${includedir}

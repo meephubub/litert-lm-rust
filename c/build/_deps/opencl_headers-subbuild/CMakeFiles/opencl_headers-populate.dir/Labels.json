@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/opencl_headers-populate"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/8465e44e3017f8f348e908fa99a11e57/opencl_headers-populate.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/f50b077ca8dccf0b50615244321adad5/opencl_headers-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/fb709e4317ee51119387ab7b657b701c/opencl_headers-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"opencl_headers-populate"
+		],
+		"name" : "opencl_headers-populate"
+	}
+}

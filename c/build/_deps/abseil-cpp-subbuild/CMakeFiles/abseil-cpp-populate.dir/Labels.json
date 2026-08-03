@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/abseil-cpp-populate"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/a050a7bf65769552463e6f85aaa89e52/abseil-cpp-populate.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/6da85de8a732822c994f3c67f3b179e5/abseil-cpp-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/e32c8265b70ce5cafd717e2d76b06c89/abseil-cpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"abseil-cpp-populate"
+		],
+		"name" : "abseil-cpp-populate"
+	}
+}

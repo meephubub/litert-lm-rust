@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ACAAC8AE-6FAD-3C9B-9F8F-2B2B5BEFA465}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>run_model_simple</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">run_model_simple.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">run_model_simple</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">run_model_simple.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">run_model_simple</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">run_model_simple.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">run_model_simple</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">run_model_simple.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">run_model_simple</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-declarations -Wno-return-type -fpermissive</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NOMINMAX=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;NOMINMAX=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Debug\litert_cc_api.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_parse.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_check_op.lib;_deps\abseil-cpp-build\absl\status\Debug\absl_statusor.lib;_deps\abseil-cpp-build\absl\status\Debug\absl_status.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_die_if_null.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_conditions.lib;_deps\flatbuffers-build\Debug\flatbuffers.lib;litert_c_api-NOTFOUND;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_usage.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_usage_internal.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_internal.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_marshalling.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_reflection.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_config.lib;_deps\abseil-cpp-build\absl\container\Debug\absl_raw_hash_set.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_cord.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_cordz_info.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_cord_internal.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_cordz_functions.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_cordz_handle.lib;_deps\abseil-cpp-build\absl\crc\Debug\absl_crc_cord_state.lib;_deps\abseil-cpp-build\absl\crc\Debug\absl_crc32c.lib;_deps\abseil-cpp-build\absl\crc\Debug\absl_crc_internal.lib;_deps\abseil-cpp-build\absl\crc\Debug\absl_crc_cpu_detect.lib;_deps\abseil-cpp-build\absl\container\Debug\absl_hashtablez_sampler.lib;_deps\abseil-cpp-build\absl\profiling\Debug\absl_exponential_biased.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_private_handle_accessor.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_commandlineflag.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_commandlineflag_internal.lib;_deps\abseil-cpp-build\absl\flags\Debug\absl_flags_program_name.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_distributions.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_seed_sequences.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_entropy_pool.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_randen.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_randen_hwaes.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_randen_hwaes_impl.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_randen_slow.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_platform.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_internal_seed_material.lib;_deps\abseil-cpp-build\absl\random\Debug\absl_random_seed_gen_exception.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_leak_check.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_examine_stack.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_format.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_str_format_internal.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_nullguard.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_structured_proto.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_log_sink_set.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_globals.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_globals.lib;_deps\abseil-cpp-build\absl\hash\Debug\absl_hash.lib;_deps\abseil-cpp-build\absl\hash\Debug\absl_city.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_vlog_config_internal.lib;_deps\abseil-cpp-build\absl\synchronization\Debug\absl_synchronization.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_stacktrace.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_symbolize.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_debugging_internal.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_demangle_internal.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_demangle_rust.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_decode_rust_punycode.lib;_deps\abseil-cpp-build\absl\debugging\Debug\absl_utf8_for_code_point.lib;_deps\abseil-cpp-build\absl\synchronization\Debug\absl_graphcycles_internal.lib;_deps\abseil-cpp-build\absl\synchronization\Debug\absl_kernel_timeout_internal.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_malloc_internal.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_tracing_internal.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_fnmatch.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_sink.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_entry.lib;_deps\abseil-cpp-build\absl\log\Debug\absl_log_internal_proto.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_strerror.lib;_deps\abseil-cpp-build\absl\time\Debug\absl_time.lib;_deps\abseil-cpp-build\absl\time\Debug\absl_civil_time.lib;_deps\abseil-cpp-build\absl\time\Debug\absl_time_zone.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_strings.lib;_deps\abseil-cpp-build\absl\types\Debug\absl_source_location.lib;_deps\abseil-cpp-build\absl\strings\Debug\absl_strings_internal.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_throw_delegate.lib;_deps\abseil-cpp-build\absl\numeric\Debug\absl_int128.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_base.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_raw_logging_internal.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_spinlock_wait.lib;_deps\abseil-cpp-build\absl\base\Debug\absl_log_severity.lib;-ignore:4221;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marcn/Desktop/litert-lm-rust/c/build/Debug/run_model_simple.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marcn/Desktop/litert-lm-rust/c/build/Debug/run_model_simple.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-declarations -Wno-return-type -fpermissive</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Release\litert_cc_api.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_parse.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_check_op.lib;_deps\abseil-cpp-build\absl\status\Release\absl_statusor.lib;_deps\abseil-cpp-build\absl\status\Release\absl_status.lib;_deps\abseil-cpp-build\absl\log\Release\absl_die_if_null.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_conditions.lib;_deps\flatbuffers-build\Release\flatbuffers.lib;litert_c_api-NOTFOUND;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_usage.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_usage_internal.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_internal.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_marshalling.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_reflection.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_config.lib;_deps\abseil-cpp-build\absl\container\Release\absl_raw_hash_set.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_cord.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_cordz_info.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_cord_internal.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_cordz_functions.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_cordz_handle.lib;_deps\abseil-cpp-build\absl\crc\Release\absl_crc_cord_state.lib;_deps\abseil-cpp-build\absl\crc\Release\absl_crc32c.lib;_deps\abseil-cpp-build\absl\crc\Release\absl_crc_internal.lib;_deps\abseil-cpp-build\absl\crc\Release\absl_crc_cpu_detect.lib;_deps\abseil-cpp-build\absl\container\Release\absl_hashtablez_sampler.lib;_deps\abseil-cpp-build\absl\profiling\Release\absl_exponential_biased.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_private_handle_accessor.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_commandlineflag.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_commandlineflag_internal.lib;_deps\abseil-cpp-build\absl\flags\Release\absl_flags_program_name.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_distributions.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_seed_sequences.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_entropy_pool.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_randen.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_randen_hwaes.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_randen_hwaes_impl.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_randen_slow.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_platform.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_internal_seed_material.lib;_deps\abseil-cpp-build\absl\random\Release\absl_random_seed_gen_exception.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_leak_check.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_examine_stack.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_format.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_str_format_internal.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_nullguard.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_structured_proto.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_log_sink_set.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_globals.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_globals.lib;_deps\abseil-cpp-build\absl\hash\Release\absl_hash.lib;_deps\abseil-cpp-build\absl\hash\Release\absl_city.lib;_deps\abseil-cpp-build\absl\log\Release\absl_vlog_config_internal.lib;_deps\abseil-cpp-build\absl\synchronization\Release\absl_synchronization.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_stacktrace.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_symbolize.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_debugging_internal.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_demangle_internal.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_demangle_rust.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_decode_rust_punycode.lib;_deps\abseil-cpp-build\absl\debugging\Release\absl_utf8_for_code_point.lib;_deps\abseil-cpp-build\absl\synchronization\Release\absl_graphcycles_internal.lib;_deps\abseil-cpp-build\absl\synchronization\Release\absl_kernel_timeout_internal.lib;_deps\abseil-cpp-build\absl\base\Release\absl_malloc_internal.lib;_deps\abseil-cpp-build\absl\base\Release\absl_tracing_internal.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_fnmatch.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_sink.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_entry.lib;_deps\abseil-cpp-build\absl\log\Release\absl_log_internal_proto.lib;_deps\abseil-cpp-build\absl\base\Release\absl_strerror.lib;_deps\abseil-cpp-build\absl\time\Release\absl_time.lib;_deps\abseil-cpp-build\absl\time\Release\absl_civil_time.lib;_deps\abseil-cpp-build\absl\time\Release\absl_time_zone.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_strings.lib;_deps\abseil-cpp-build\absl\types\Release\absl_source_location.lib;_deps\abseil-cpp-build\absl\strings\Release\absl_strings_internal.lib;_deps\abseil-cpp-build\absl\base\Release\absl_throw_delegate.lib;_deps\abseil-cpp-build\absl\numeric\Release\absl_int128.lib;_deps\abseil-cpp-build\absl\base\Release\absl_base.lib;_deps\abseil-cpp-build\absl\base\Release\absl_raw_logging_internal.lib;_deps\abseil-cpp-build\absl\base\Release\absl_spinlock_wait.lib;_deps\abseil-cpp-build\absl\base\Release\absl_log_severity.lib;-ignore:4221;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marcn/Desktop/litert-lm-rust/c/build/Release/run_model_simple.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marcn/Desktop/litert-lm-rust/c/build/Release/run_model_simple.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-declarations -Wno-return-type -fpermissive</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>MinSizeRel\litert_cc_api.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_parse.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_check_op.lib;_deps\abseil-cpp-build\absl\status\MinSizeRel\absl_statusor.lib;_deps\abseil-cpp-build\absl\status\MinSizeRel\absl_status.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_die_if_null.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_conditions.lib;_deps\flatbuffers-build\MinSizeRel\flatbuffers.lib;litert_c_api-NOTFOUND;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_usage.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_usage_internal.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_internal.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_marshalling.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_reflection.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_config.lib;_deps\abseil-cpp-build\absl\container\MinSizeRel\absl_raw_hash_set.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_cord.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_cordz_info.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_cord_internal.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_cordz_functions.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_cordz_handle.lib;_deps\abseil-cpp-build\absl\crc\MinSizeRel\absl_crc_cord_state.lib;_deps\abseil-cpp-build\absl\crc\MinSizeRel\absl_crc32c.lib;_deps\abseil-cpp-build\absl\crc\MinSizeRel\absl_crc_internal.lib;_deps\abseil-cpp-build\absl\crc\MinSizeRel\absl_crc_cpu_detect.lib;_deps\abseil-cpp-build\absl\container\MinSizeRel\absl_hashtablez_sampler.lib;_deps\abseil-cpp-build\absl\profiling\MinSizeRel\absl_exponential_biased.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_private_handle_accessor.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_commandlineflag.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_commandlineflag_internal.lib;_deps\abseil-cpp-build\absl\flags\MinSizeRel\absl_flags_program_name.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_distributions.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_seed_sequences.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_entropy_pool.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_randen.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_randen_hwaes.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_randen_hwaes_impl.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_randen_slow.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_platform.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_internal_seed_material.lib;_deps\abseil-cpp-build\absl\random\MinSizeRel\absl_random_seed_gen_exception.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_leak_check.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_examine_stack.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_format.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_str_format_internal.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_nullguard.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_structured_proto.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_log_sink_set.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_globals.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_globals.lib;_deps\abseil-cpp-build\absl\hash\MinSizeRel\absl_hash.lib;_deps\abseil-cpp-build\absl\hash\MinSizeRel\absl_city.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_vlog_config_internal.lib;_deps\abseil-cpp-build\absl\synchronization\MinSizeRel\absl_synchronization.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_stacktrace.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_symbolize.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_debugging_internal.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_demangle_internal.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_demangle_rust.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_decode_rust_punycode.lib;_deps\abseil-cpp-build\absl\debugging\MinSizeRel\absl_utf8_for_code_point.lib;_deps\abseil-cpp-build\absl\synchronization\MinSizeRel\absl_graphcycles_internal.lib;_deps\abseil-cpp-build\absl\synchronization\MinSizeRel\absl_kernel_timeout_internal.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_malloc_internal.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_tracing_internal.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_fnmatch.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_sink.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_entry.lib;_deps\abseil-cpp-build\absl\log\MinSizeRel\absl_log_internal_proto.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_strerror.lib;_deps\abseil-cpp-build\absl\time\MinSizeRel\absl_time.lib;_deps\abseil-cpp-build\absl\time\MinSizeRel\absl_civil_time.lib;_deps\abseil-cpp-build\absl\time\MinSizeRel\absl_time_zone.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_strings.lib;_deps\abseil-cpp-build\absl\types\MinSizeRel\absl_source_location.lib;_deps\abseil-cpp-build\absl\strings\MinSizeRel\absl_strings_internal.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_throw_delegate.lib;_deps\abseil-cpp-build\absl\numeric\MinSizeRel\absl_int128.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_base.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_raw_logging_internal.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_spinlock_wait.lib;_deps\abseil-cpp-build\absl\base\MinSizeRel\absl_log_severity.lib;-ignore:4221;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marcn/Desktop/litert-lm-rust/c/build/MinSizeRel/run_model_simple.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marcn/Desktop/litert-lm-rust/c/build/MinSizeRel/run_model_simple.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -Wno-deprecated-declarations -Wno-return-type -fpermissive</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\marcn\Desktop\litert-lm-rust\c\build\include;C:\Users\marcn\Desktop\litert-lm-rust\c\build\opencl_headers;C:\Users\marcn\Desktop\litert-lm-rust\c;C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>RelWithDebInfo\litert_cc_api.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_parse.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_check_op.lib;_deps\abseil-cpp-build\absl\status\RelWithDebInfo\absl_statusor.lib;_deps\abseil-cpp-build\absl\status\RelWithDebInfo\absl_status.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_die_if_null.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_conditions.lib;_deps\flatbuffers-build\RelWithDebInfo\flatbuffers.lib;litert_c_api-NOTFOUND;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_usage.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_usage_internal.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_internal.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_marshalling.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_reflection.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_config.lib;_deps\abseil-cpp-build\absl\container\RelWithDebInfo\absl_raw_hash_set.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_cord.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_cordz_info.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_cord_internal.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_cordz_functions.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_cordz_handle.lib;_deps\abseil-cpp-build\absl\crc\RelWithDebInfo\absl_crc_cord_state.lib;_deps\abseil-cpp-build\absl\crc\RelWithDebInfo\absl_crc32c.lib;_deps\abseil-cpp-build\absl\crc\RelWithDebInfo\absl_crc_internal.lib;_deps\abseil-cpp-build\absl\crc\RelWithDebInfo\absl_crc_cpu_detect.lib;_deps\abseil-cpp-build\absl\container\RelWithDebInfo\absl_hashtablez_sampler.lib;_deps\abseil-cpp-build\absl\profiling\RelWithDebInfo\absl_exponential_biased.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_private_handle_accessor.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_commandlineflag.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_commandlineflag_internal.lib;_deps\abseil-cpp-build\absl\flags\RelWithDebInfo\absl_flags_program_name.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_distributions.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_seed_sequences.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_entropy_pool.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_randen.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_randen_hwaes.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_randen_hwaes_impl.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_randen_slow.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_platform.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_internal_seed_material.lib;_deps\abseil-cpp-build\absl\random\RelWithDebInfo\absl_random_seed_gen_exception.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_leak_check.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_message.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_examine_stack.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_format.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_str_format_internal.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_nullguard.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_structured_proto.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_log_sink_set.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_globals.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_globals.lib;_deps\abseil-cpp-build\absl\hash\RelWithDebInfo\absl_hash.lib;_deps\abseil-cpp-build\absl\hash\RelWithDebInfo\absl_city.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_vlog_config_internal.lib;_deps\abseil-cpp-build\absl\synchronization\RelWithDebInfo\absl_synchronization.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_stacktrace.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_symbolize.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_debugging_internal.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_demangle_internal.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_demangle_rust.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_decode_rust_punycode.lib;_deps\abseil-cpp-build\absl\debugging\RelWithDebInfo\absl_utf8_for_code_point.lib;_deps\abseil-cpp-build\absl\synchronization\RelWithDebInfo\absl_graphcycles_internal.lib;_deps\abseil-cpp-build\absl\synchronization\RelWithDebInfo\absl_kernel_timeout_internal.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_malloc_internal.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_tracing_internal.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_fnmatch.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_sink.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_entry.lib;_deps\abseil-cpp-build\absl\log\RelWithDebInfo\absl_log_internal_proto.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_strerror.lib;_deps\abseil-cpp-build\absl\time\RelWithDebInfo\absl_time.lib;_deps\abseil-cpp-build\absl\time\RelWithDebInfo\absl_civil_time.lib;_deps\abseil-cpp-build\absl\time\RelWithDebInfo\absl_time_zone.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_strings.lib;_deps\abseil-cpp-build\absl\types\RelWithDebInfo\absl_source_location.lib;_deps\abseil-cpp-build\absl\strings\RelWithDebInfo\absl_strings_internal.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_throw_delegate.lib;_deps\abseil-cpp-build\absl\numeric\RelWithDebInfo\absl_int128.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_base.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_raw_logging_internal.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_spinlock_wait.lib;_deps\abseil-cpp-build\absl\base\RelWithDebInfo\absl_log_severity.lib;-ignore:4221;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marcn/Desktop/litert-lm-rust/c/build/RelWithDebInfo/run_model_simple.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marcn/Desktop/litert-lm-rust/c/build/RelWithDebInfo/run_model_simple.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/marcn/Desktop/litert-lm-rust/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c -BC:/Users/marcn/Desktop/litert-lm-rust/c/build --check-stamp-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerSupport.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\FindFlatBuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findabsl.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findopencl_headers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\OverridableFetchContent.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\abseil-cpp.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeSystem.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers-flatc\tmp\flatbuffers-flatc-mkdirs.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\flatbuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\litert\build_common\build_config.h.in;C:\Users\marcn\Desktop\litert-lm-rust\c\opencl_headers.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/marcn/Desktop/litert-lm-rust/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c -BC:/Users/marcn/Desktop/litert-lm-rust/c/build --check-stamp-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerSupport.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\FindFlatBuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findabsl.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findopencl_headers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\OverridableFetchContent.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\abseil-cpp.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeSystem.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers-flatc\tmp\flatbuffers-flatc-mkdirs.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\flatbuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\litert\build_common\build_config.h.in;C:\Users\marcn\Desktop\litert-lm-rust\c\opencl_headers.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/marcn/Desktop/litert-lm-rust/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c -BC:/Users/marcn/Desktop/litert-lm-rust/c/build --check-stamp-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerSupport.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\FindFlatBuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findabsl.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findopencl_headers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\OverridableFetchContent.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\abseil-cpp.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeSystem.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers-flatc\tmp\flatbuffers-flatc-mkdirs.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\flatbuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\litert\build_common\build_config.h.in;C:\Users\marcn\Desktop\litert-lm-rust\c\opencl_headers.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/marcn/Desktop/litert-lm-rust/c/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c -BC:/Users/marcn/Desktop/litert-lm-rust/c/build --check-stamp-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineCompilerSupport.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.31\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\FindFlatBuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findabsl.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\Findopencl_headers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\OverridableFetchContent.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\abseil-cpp.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeCXXCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeRCCompiler.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\3.31.1\CMakeSystem.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers-flatc\tmp\flatbuffers-flatc-mkdirs.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\flatbuffers.cmake;C:\Users\marcn\Desktop\litert-lm-rust\c\litert\build_common\build_config.h.in;C:\Users\marcn\Desktop\litert-lm-rust\c\opencl_headers.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\marcn\Desktop\litert-lm-rust\c\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\litert\tools\run_model_simple.cc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\ZERO_CHECK.vcxproj">
+      <Project>{7A2CDD7C-5250-3FF1-97CB-5398849A0657}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_base.vcxproj">
+      <Project>{D9C72542-2D48-39DF-9DE1-1E00CF72796A}</Project>
+      <Name>absl_base</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\hash\absl_city.vcxproj">
+      <Project>{C60718D4-7647-3AA9-BC4C-0C095151E02B}</Project>
+      <Name>absl_city</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\time\absl_civil_time.vcxproj">
+      <Project>{DBD13ED5-95ED-3B1B-BB6C-478FBC963DBE}</Project>
+      <Name>absl_civil_time</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_cord.vcxproj">
+      <Project>{5A04759D-C818-3DB1-A52B-0CA509C9AE11}</Project>
+      <Name>absl_cord</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_cord_internal.vcxproj">
+      <Project>{26C218EE-27BB-3609-9A1F-E009DDCABE9C}</Project>
+      <Name>absl_cord_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_cordz_functions.vcxproj">
+      <Project>{5B547774-F137-3437-B081-EA46BFE66866}</Project>
+      <Name>absl_cordz_functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_cordz_handle.vcxproj">
+      <Project>{B3A2CFF6-3CF2-3F2D-B99B-1F463814CD8A}</Project>
+      <Name>absl_cordz_handle</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_cordz_info.vcxproj">
+      <Project>{EDD613DA-3E1D-3805-9315-AA02D0826817}</Project>
+      <Name>absl_cordz_info</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\crc\absl_crc32c.vcxproj">
+      <Project>{6CAD34D0-6BDB-318F-977B-639853CD889C}</Project>
+      <Name>absl_crc32c</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\crc\absl_crc_cord_state.vcxproj">
+      <Project>{E8CFAD03-CC11-3797-9CF2-B53AA01B9688}</Project>
+      <Name>absl_crc_cord_state</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\crc\absl_crc_cpu_detect.vcxproj">
+      <Project>{9C9C1F99-EC02-36CB-8E7A-E51DF7FB52E7}</Project>
+      <Name>absl_crc_cpu_detect</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\crc\absl_crc_internal.vcxproj">
+      <Project>{6E077DCE-99A1-3871-91D6-5E0998B84C8C}</Project>
+      <Name>absl_crc_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_debugging_internal.vcxproj">
+      <Project>{3E23AE75-04C6-359C-9961-DFE89591F47E}</Project>
+      <Name>absl_debugging_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_decode_rust_punycode.vcxproj">
+      <Project>{38F2A839-D233-30C1-BC1D-A30DE49BBA03}</Project>
+      <Name>absl_decode_rust_punycode</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_demangle_internal.vcxproj">
+      <Project>{85C3543B-5597-3722-94B2-E8FF6678ACB1}</Project>
+      <Name>absl_demangle_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_demangle_rust.vcxproj">
+      <Project>{CF0FDBCC-55A0-3276-8798-64626783D6AF}</Project>
+      <Name>absl_demangle_rust</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_die_if_null.vcxproj">
+      <Project>{63B90108-F73B-3559-9E6E-E57F2149CEC8}</Project>
+      <Name>absl_die_if_null</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_examine_stack.vcxproj">
+      <Project>{93A87058-81CA-3643-A223-770379F33B6F}</Project>
+      <Name>absl_examine_stack</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\profiling\absl_exponential_biased.vcxproj">
+      <Project>{717BEB11-0FD0-3EEC-A056-4457BC18F4AF}</Project>
+      <Name>absl_exponential_biased</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_commandlineflag.vcxproj">
+      <Project>{EEDB96F3-B9EE-375A-8A6B-60228D7665BA}</Project>
+      <Name>absl_flags_commandlineflag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_commandlineflag_internal.vcxproj">
+      <Project>{FE971947-1CB4-303E-B488-EF05B1212E3B}</Project>
+      <Name>absl_flags_commandlineflag_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_config.vcxproj">
+      <Project>{572E717B-529D-30AC-AD93-617DAB962405}</Project>
+      <Name>absl_flags_config</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_internal.vcxproj">
+      <Project>{EB0914DA-3A2D-3532-8F5A-21B65B9AD23F}</Project>
+      <Name>absl_flags_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_marshalling.vcxproj">
+      <Project>{15ECD641-FC65-324F-80DC-E0D0679AEA3A}</Project>
+      <Name>absl_flags_marshalling</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_parse.vcxproj">
+      <Project>{1026FB1F-A5B5-37F9-A84D-00C4B2B87AC3}</Project>
+      <Name>absl_flags_parse</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_private_handle_accessor.vcxproj">
+      <Project>{DB7F8BBB-CD8C-3048-8046-30D9F135CC52}</Project>
+      <Name>absl_flags_private_handle_accessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_program_name.vcxproj">
+      <Project>{3FEDC44C-77AC-3341-8337-9BC57557357A}</Project>
+      <Name>absl_flags_program_name</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_reflection.vcxproj">
+      <Project>{3466404B-EBE7-358F-A961-BE28847E4837}</Project>
+      <Name>absl_flags_reflection</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_usage.vcxproj">
+      <Project>{3417779D-4C37-3C08-96B5-9CF37E5BCB06}</Project>
+      <Name>absl_flags_usage</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\flags\absl_flags_usage_internal.vcxproj">
+      <Project>{559793D5-4D03-3DF2-8085-4E32939615A9}</Project>
+      <Name>absl_flags_usage_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\synchronization\absl_graphcycles_internal.vcxproj">
+      <Project>{A71399D8-9138-36FF-A73B-50E027D8CF60}</Project>
+      <Name>absl_graphcycles_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\hash\absl_hash.vcxproj">
+      <Project>{62704084-8622-3032-929E-BED2DD491AB1}</Project>
+      <Name>absl_hash</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\container\absl_hashtablez_sampler.vcxproj">
+      <Project>{DB51F56C-F024-3142-A682-11E0E0133E50}</Project>
+      <Name>absl_hashtablez_sampler</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\numeric\absl_int128.vcxproj">
+      <Project>{E43CEF0E-184B-33FB-A297-54883A939E02}</Project>
+      <Name>absl_int128</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\synchronization\absl_kernel_timeout_internal.vcxproj">
+      <Project>{95E7D04F-5496-30C3-9286-E96E81A60A7A}</Project>
+      <Name>absl_kernel_timeout_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_leak_check.vcxproj">
+      <Project>{978ABA17-D258-335F-BEB2-51B21BB72179}</Project>
+      <Name>absl_leak_check</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_entry.vcxproj">
+      <Project>{847ADB22-E2E4-331C-A16B-C031292C950A}</Project>
+      <Name>absl_log_entry</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_globals.vcxproj">
+      <Project>{D306C23C-40BF-3F5F-A4E5-069F9804F596}</Project>
+      <Name>absl_log_globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_check_op.vcxproj">
+      <Project>{20090249-B336-3005-8805-AC6DC79005F1}</Project>
+      <Name>absl_log_internal_check_op</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_conditions.vcxproj">
+      <Project>{C42FD3B2-88AB-38B8-8EEB-B56531076182}</Project>
+      <Name>absl_log_internal_conditions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_fnmatch.vcxproj">
+      <Project>{31EC5A4D-5A91-3D3A-B41C-D62D2E55A446}</Project>
+      <Name>absl_log_internal_fnmatch</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_format.vcxproj">
+      <Project>{E3E67B41-A659-353B-A7A2-5E37C559EF34}</Project>
+      <Name>absl_log_internal_format</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_globals.vcxproj">
+      <Project>{3B5F98A5-36FE-3B9C-B228-86CB471A3C4F}</Project>
+      <Name>absl_log_internal_globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_log_sink_set.vcxproj">
+      <Project>{ED294766-3F29-35E9-8DCC-1EFDBFBFA635}</Project>
+      <Name>absl_log_internal_log_sink_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_message.vcxproj">
+      <Project>{DD1C0888-7650-365F-B3F9-1352416062DA}</Project>
+      <Name>absl_log_internal_message</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_nullguard.vcxproj">
+      <Project>{BC498E69-1E5C-36C1-8F78-01740EFC3324}</Project>
+      <Name>absl_log_internal_nullguard</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_proto.vcxproj">
+      <Project>{2A823BA1-982F-33C6-864C-0C5788DC7214}</Project>
+      <Name>absl_log_internal_proto</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_internal_structured_proto.vcxproj">
+      <Project>{F194DAAC-E8AD-3FF5-9E1F-03637D575A4A}</Project>
+      <Name>absl_log_internal_structured_proto</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_log_severity.vcxproj">
+      <Project>{C12D5AD5-ED2F-3B95-BAE1-4889A3C7DDAD}</Project>
+      <Name>absl_log_severity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_log_sink.vcxproj">
+      <Project>{52918460-25B8-3277-ABDF-6633F4DB7313}</Project>
+      <Name>absl_log_sink</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_malloc_internal.vcxproj">
+      <Project>{685161B8-BB6F-3A25-A899-35C8A8DDECB1}</Project>
+      <Name>absl_malloc_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_distributions.vcxproj">
+      <Project>{47276DF0-5F73-37EB-9C2F-D3AE8A5EAA35}</Project>
+      <Name>absl_random_distributions</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_entropy_pool.vcxproj">
+      <Project>{0C702630-86B0-37F3-8BF4-1B2D9B8AFAD4}</Project>
+      <Name>absl_random_internal_entropy_pool</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_platform.vcxproj">
+      <Project>{1A9C37FD-6E9D-3ED2-93D3-808CA3EC43F4}</Project>
+      <Name>absl_random_internal_platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_randen.vcxproj">
+      <Project>{F0FBCE7B-587D-3B62-887E-C8718BBE823B}</Project>
+      <Name>absl_random_internal_randen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_randen_hwaes.vcxproj">
+      <Project>{E6B30055-1B3E-380B-AAD1-B18C17B42152}</Project>
+      <Name>absl_random_internal_randen_hwaes</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_randen_hwaes_impl.vcxproj">
+      <Project>{90E485C3-1FBC-3B74-9908-ED538239EDB8}</Project>
+      <Name>absl_random_internal_randen_hwaes_impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_randen_slow.vcxproj">
+      <Project>{D8BE6956-8DF3-311C-9E46-2E28C6482507}</Project>
+      <Name>absl_random_internal_randen_slow</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_internal_seed_material.vcxproj">
+      <Project>{6EFA0677-53F1-3A32-8096-5EC01E61F7DD}</Project>
+      <Name>absl_random_internal_seed_material</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_seed_gen_exception.vcxproj">
+      <Project>{1F6EC356-4EF4-30D9-AEFA-8573B2B43D27}</Project>
+      <Name>absl_random_seed_gen_exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\random\absl_random_seed_sequences.vcxproj">
+      <Project>{BC63B494-EED1-3531-89F1-7857B7EBF0E8}</Project>
+      <Name>absl_random_seed_sequences</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\container\absl_raw_hash_set.vcxproj">
+      <Project>{C4B725B6-B01E-3B59-88DA-ECC4EB38119F}</Project>
+      <Name>absl_raw_hash_set</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_raw_logging_internal.vcxproj">
+      <Project>{CC1C59C7-BDC5-39F9-90B7-33F8EFFE94A6}</Project>
+      <Name>absl_raw_logging_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\types\absl_source_location.vcxproj">
+      <Project>{9845DAC8-7A47-3164-B273-82EA649030D8}</Project>
+      <Name>absl_source_location</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_spinlock_wait.vcxproj">
+      <Project>{4218EC1E-C77B-3090-8551-EB2EFDC4E1B2}</Project>
+      <Name>absl_spinlock_wait</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_stacktrace.vcxproj">
+      <Project>{760E618F-9B74-313A-8B01-13A9113ECE53}</Project>
+      <Name>absl_stacktrace</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\status\absl_status.vcxproj">
+      <Project>{6FFEB28F-82B7-35E4-ABCC-6712AF1E2508}</Project>
+      <Name>absl_status</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\status\absl_statusor.vcxproj">
+      <Project>{EBE47BD7-21F0-37D2-964C-AF19D9FC3ADD}</Project>
+      <Name>absl_statusor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_str_format_internal.vcxproj">
+      <Project>{043BB4A3-513D-3EE1-8200-C79C4489D7FF}</Project>
+      <Name>absl_str_format_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_strerror.vcxproj">
+      <Project>{3C2177E1-427D-31A2-83C4-29A799D1B5B1}</Project>
+      <Name>absl_strerror</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_strings.vcxproj">
+      <Project>{13BFA5F8-E027-37F5-8F0A-C72E6F2AFED3}</Project>
+      <Name>absl_strings</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\strings\absl_strings_internal.vcxproj">
+      <Project>{B3F113CB-CC0F-3F35-B91C-C4B7664E8838}</Project>
+      <Name>absl_strings_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_symbolize.vcxproj">
+      <Project>{FA0C6636-986E-39F2-8AA8-671F405A4E84}</Project>
+      <Name>absl_symbolize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\synchronization\absl_synchronization.vcxproj">
+      <Project>{92C18323-2D57-315E-BA88-4B3E423FE08A}</Project>
+      <Name>absl_synchronization</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_throw_delegate.vcxproj">
+      <Project>{4144E830-8034-30EA-B8A3-05B64ADD0AB9}</Project>
+      <Name>absl_throw_delegate</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\time\absl_time.vcxproj">
+      <Project>{86C79AB1-D5DB-39D0-8FA2-9B4047F41673}</Project>
+      <Name>absl_time</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\time\absl_time_zone.vcxproj">
+      <Project>{D8A0F054-D4FE-33E1-A872-348F4E3D778C}</Project>
+      <Name>absl_time_zone</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\base\absl_tracing_internal.vcxproj">
+      <Project>{CDD30B22-E1BC-3DD4-AF82-E22081AFDB8D}</Project>
+      <Name>absl_tracing_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\debugging\absl_utf8_for_code_point.vcxproj">
+      <Project>{A62E008E-5E99-3580-916B-4AC5D5E3C2D8}</Project>
+      <Name>absl_utf8_for_code_point</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build\absl\log\absl_vlog_config_internal.vcxproj">
+      <Project>{8E799D56-452F-3B8E-8D86-CEA94B62E609}</Project>
+      <Name>absl_vlog_config_internal</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-build\flatbuffers.vcxproj">
+      <Project>{D5AED092-FD3F-3DDC-A2C0-AA0436B3668A}</Project>
+      <Name>flatbuffers</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\litert_cc_api.vcxproj">
+      <Project>{B343DE26-C7A6-330D-A952-4BC2EEDC66D3}</Project>
+      <Name>litert_cc_api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

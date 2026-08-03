@@ -1,0 +1,10 @@
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\FLATBUFFERS-SUBBUILD\CMAKEFILES\1013DF8CD657B1C7F58D0D7B37F91291\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/flatbuffers-subbuild -BC:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/flatbuffers-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/flatbuffers-subbuild/flatbuffers-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

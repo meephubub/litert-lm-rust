@@ -1,0 +1,85 @@
+name: Build LiteRT-LM Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout LiteRT-LM
+        uses: actions/checkout@v4
+        with:
+          repository: google-ai-edge/LiteRT-LM
+
+      - name: Setup Bazelisk
+        uses: bazelbuild/setup-bazelisk@v3
+
+      - name: Stub Android dependencies
+        shell: powershell
+        run: |
+          # Create an empty folder to trick the workspace syntax parser into passing validation
+          New-Item -ItemType Directory -Force -Path C:\dummy_android
+
+          $path = "WORKSPACE"
+          Write-Host "Stubbing paths in $path..."
+          $text = Get-Content $path -Raw
+
+          # Supply a valid physical location to satisfy toolchain registration
+          $text = $text -replace `
+            'android_ndk_repository\(name = "androidndk"\)', `
+            'android_ndk_repository(name = "androidndk", path = "C:/dummy_android")'
+
+          $text = $text -replace `
+            'android_sdk_repository\(name = "androidsdk"\)', `
+            'android_sdk_repository(name = "androidsdk", path = "C:/dummy_android")'
+
+          Set-Content $path $text
+          Write-Host "Checking patch state:"
+          Select-String -Path $path -Pattern "android_ndk_repository|android_sdk_repository"
+
+      - name: Build LiteRT-LM C API
+        shell: powershell
+        run: |
+          # Replaced invalid @bazel_tools//platforms reference with standard @platforms target
+          bazelisk build //c:litert-lm `
+            --config=windows `
+            --platforms=@platforms//os:windows `
+            --verbose_failures
+
+      - name: Locate build output
+        shell: powershell
+        run: |
+          Write-Host "Searching bazel-bin..."
+          Get-ChildItem `
+            -Recurse `
+            bazel-bin `
+            -Include *.dll,*.lib `
+            -ErrorAction SilentlyContinue
+
+      - name: Collect binaries
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory -Force -Path output
+          Copy-Item `
+            bazel-bin\c\*.dll `
+            output\ `
+            -ErrorAction SilentlyContinue
+          Copy-Item `
+            bazel-bin\c\*.lib `
+            output\ `
+            -ErrorAction SilentlyContinue
+          # LiteRT runtime dependencies
+          Copy-Item `
+            prebuilt\windows_x86_64\*.dll `
+            output\ `
+            -ErrorAction SilentlyContinue
+          Write-Host "Final files:"
+          Get-ChildItem output
+
+      - name: Upload Windows binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: litert-lm-windows-x86_64
+          path: output

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\src\idl_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\src\idl_gen_text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\src\reflection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\src\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\buffer_ref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\default_allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\detached_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\code_generator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\file_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\flatbuffer_builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\flatbuffers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\flexbuffers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\flex_flat_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\idl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\minireflect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\reflection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\reflection_generated.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\stl_emulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\vector_downward.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\include\flatbuffers\verifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\flatbuffers\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{475AD0B7-802C-3DD4-B574-19BC379F8197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B7B4CFBE-A9CD-330D-8E65-4520035E9A6D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

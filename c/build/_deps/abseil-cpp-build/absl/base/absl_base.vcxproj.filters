@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\casts.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\cycleclock.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\spinlock.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\sysinfo.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\thread_identity.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\unscaledcycleclock.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\call_once.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\casts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\cycleclock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\cycleclock_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\low_level_scheduling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\per_thread_tls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\spinlock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\sysinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\thread_identity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\tsan_mutex_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\unscaledcycleclock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\unscaledcycleclock_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{475AD0B7-802C-3DD4-B574-19BC379F8197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B7B4CFBE-A9CD-330D-8E65-4520035E9A6D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\e32c8265b70ce5cafd717e2d76b06c89\abseil-cpp-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\6da85de8a732822c994f3c67f3b179e5\abseil-cpp-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\a050a7bf65769552463e6f85aaa89e52\abseil-cpp-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-subbuild\CMakeFiles\abseil-cpp-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{1F060CE8-E776-302B-8287-FDE88891F8CA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

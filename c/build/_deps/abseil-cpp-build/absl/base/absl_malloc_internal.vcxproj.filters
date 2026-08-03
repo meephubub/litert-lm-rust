@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\low_level_alloc.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\direct_mmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\internal\low_level_alloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp\absl\base\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{475AD0B7-802C-3DD4-B574-19BC379F8197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B7B4CFBE-A9CD-330D-8E65-4520035E9A6D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

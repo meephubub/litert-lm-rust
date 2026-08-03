@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\a2b15163fed3f06afe1438a711604d2c\flatbuffers-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\eac548027a1a5bfe446154e6951cac5d\flatbuffers-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\1013df8cd657b1c7f58d0d7b37f91291\flatbuffers-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\flatbuffers-subbuild\CMakeFiles\flatbuffers-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A0918743-CF4E-3DC3-9734-DE52F2CA45F5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

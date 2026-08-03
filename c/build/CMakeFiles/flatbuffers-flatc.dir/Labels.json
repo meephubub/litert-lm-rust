@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/flatbuffers-flatc"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/93c6398f12c7b05bd192313423e42a4c/flatbuffers-flatc.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/fd1a0e245c68eb8edd4b2cc4dc964c99/flatbuffers-flatc-complete.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-build.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-configure.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-download.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-install.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-patch.rule"
+		},
+		{
+			"file" : "C:/Users/marcn/Desktop/litert-lm-rust/c/build/CMakeFiles/831261c3b7fc39f326bc59ed04729a3c/flatbuffers-flatc-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"flatbuffers-flatc"
+		],
+		"name" : "flatbuffers-flatc"
+	}
+}

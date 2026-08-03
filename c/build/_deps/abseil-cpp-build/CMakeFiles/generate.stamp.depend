@@ -1,0 +1,23 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CTestTargets.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/DartConfiguration.tcl.in
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/marcn/Desktop/litert-lm-rust/c/build/abseil-cpp/CMake/AbseilDll.cmake
+C:/Users/marcn/Desktop/litert-lm-rust/c/build/abseil-cpp/CMake/AbseilHelpers.cmake
+C:/Users/marcn/Desktop/litert-lm-rust/c/build/abseil-cpp/CMakeLists.txt
+C:/Users/marcn/Desktop/litert-lm-rust/c/build/abseil-cpp/absl/copts/AbseilConfigureCopts.cmake
+C:/Users/marcn/Desktop/litert-lm-rust/c/build/abseil-cpp/absl/copts/GENERATED_AbseilCopts.cmake

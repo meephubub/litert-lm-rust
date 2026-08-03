@@ -1,0 +1,150 @@
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/marcn/Desktop/litert-lm-rust/c/build/tmp/abseil-cpp-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/marcn/Desktop/litert-lm-rust/c/build/tmp/abseil-cpp-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-UPDATE.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build\abseil-cpp
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/marcn/Desktop/litert-lm-rust/c/build/tmp/abseil-cpp-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\E32C8265B70CE5CAFD717E2D76B06C89\ABSEIL-CPP-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\marcn\Desktop\litert-lm-rust\c\build\_deps\abseil-cpp-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\6DA85DE8A732822C994F3C67F3B179E5\ABSEIL-CPP-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/Debug/abseil-cpp-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/marcn/Desktop/litert-lm-rust/c/build/src/abseil-cpp-populate-stamp/Debug/abseil-cpp-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKEFILES\A050A7BF65769552463E6F85AAA89E52\ABSEIL-CPP-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\MARCN\DESKTOP\LITERT-LM-RUST\C\BUILD\_DEPS\ABSEIL-CPP-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild -BC:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild --check-stamp-file C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/abseil-cpp-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

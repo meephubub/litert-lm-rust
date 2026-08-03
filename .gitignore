@@ -11,3 +11,4 @@ native/
 prebuilt/
 .ccls-cache/
 .env
+/LiteRT-LM/

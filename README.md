@@ -18,7 +18,7 @@ This crate wraps the stable **C API** (`c/engine.h`), which is the supported FFI
 
 ```toml
 [dependencies]
-litert-lm-rust = "0.1"
+litert-lm-rust = "0.13"
 ```
 
 You must also link a built LiteRT-LM C shared library (see below).
@@ -97,6 +97,30 @@ Alternatively, place the shared library in this crate's `c/`, `native/`, or `pre
 | `LITERT_LM_LIB_NAME` | Library name without `lib` / extension (default tries `LiteRtLmC` / `engine`) |
 | `LITERT_LM_STATIC` | If set, link statically |
 | `LITERT_LM_INCLUDE_DIR` | Override header path (defaults to vendored `c/`) |
+### Using pre‑built Windows binaries
+
+If you have the pre‑built LiteRT‑LM binaries (from the `LiteRT-LM/prebuilt/windows_x86_64` folder of the `litert‑lm‑rust` repository) you can avoid building from source.
+
+1. **Place the folder** somewhere accessible, e.g. as a sibling of your project:
+   ```
+   <workspace_root>/litert-lm-rust/LiteRT-LM/prebuilt/windows_x86_64
+   ```
+   This directory should contain `LiteRt.dll` (or `libLiteRt.dll`) and the generated import library `LiteRt.lib` (or `libLiteRt.lib`). If you only have the DLL, generate the import library with:
+   ```sh
+   llvm-objdump -p libLiteRt.dll > symbols.txt
+   llvm-dlltool --def=symbols.txt --output-lib=LiteRt.lib
+   ```
+2. **Linking**: The crate’s `build.rs` automatically locates this directory on Windows (it walks up from `CARGO_MANIFEST_DIR` to find the sibling `litert‑lm‑rust` folder). No additional environment variables are required unless you want to override the location. To override, set:
+   ```powershell
+   $env:LITERT_LM_LIB_DIR = "C:\\path\\to\\windows_x86_64"
+   $env:LITERT_LM_LIB_NAME = "LiteRt"   # or "libLiteRt"
+   ```
+3. **What the build script does**:
+   - Adds the directory to the linker search path.
+   - Links `LiteRt` as a dynamic library.
+   - Copies the runtime DLL(s) next to the final executable so they are found at runtime.
+
+After these steps, `cargo build` (or `cargo tauri build`) should succeed without the `LINK : fatal error LNK1181: cannot open input file 'LiteRt.lib'` error.
 
 The `c/` directory also vendors the LiteRT C/C++ SDK headers used when building LiteRT-LM itself.
 
