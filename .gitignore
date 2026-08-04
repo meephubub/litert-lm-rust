@@ -14,3 +14,4 @@ prebuilt/
 /LiteRT-LM/
 c/build/
 litert_artifacts/
+logs/

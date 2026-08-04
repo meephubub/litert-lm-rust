@@ -11,7 +11,11 @@ jobs:
       - name: Enable Windows Long Paths
         shell: powershell
         run: |
-          Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+          Set-ItemProperty `
+            -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' `
+            -Name 'LongPathsEnabled' `
+            -Value 1
+
           git config --system core.longpaths true
 
       - name: Checkout LiteRT-LM
@@ -21,6 +25,8 @@ jobs:
 
       - name: Setup MSVC
         uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
 
       - name: Setup Bazelisk
         uses: bazelbuild/setup-bazelisk@v3
@@ -34,17 +40,37 @@ jobs:
           cargo --version
 
           Write-Host ""
-          Write-Host "=== Tool Locations ==="
-          where.exe bazelisk
-          where.exe rustc
-          where.exe cargo
+          Write-Host "=== Tool Resolution ==="
+
+          Write-Host "cl.exe:"
           where.exe cl
+
+          Write-Host ""
+          Write-Host "link.exe:"
           where.exe link
+
+          Write-Host ""
+          Write-Host "Selected linker:"
+          Get-Command link.exe | Format-List *
+
+          Write-Host ""
+          Write-Host "Linker version:"
+          link.exe
 
       - name: Patch minizip URL in WORKSPACE
         shell: powershell
         run: |
-          (Get-Content WORKSPACE) -replace 'url = "https://zlib.net"', 'urls = ["https://github.com", "https://zlib.net"]' | Set-Content WORKSPACE
+          $path = "WORKSPACE"
+
+          if (Test-Path $path) {
+            $text = Get-Content $path -Raw
+
+            $text = $text -replace `
+              'url = "https://zlib.net"', `
+              'urls = ["https://github.com", "https://zlib.net"]'
+
+            Set-Content $path $text
+          }
 
       - name: Patch WORKSPACE Dependencies
         shell: powershell
@@ -52,23 +78,44 @@ jobs:
           $path = "WORKSPACE"
 
           Write-Host "Patching WORKSPACE..."
+
           $text = Get-Content $path -Raw
 
           # Disable Android repositories
-          $text = $text -replace '(?s)android_ndk_repository\s*\([^)]*\)', '# android_ndk_repository disabled'
-          $text = $text -replace '(?s)android_sdk_repository\s*\([^)]*\)', '# android_sdk_repository disabled'
+          $text = $text -replace `
+            '(?s)android_ndk_repository\s*\([^)]*\)', `
+            '# android_ndk_repository disabled'
 
-          # Disable Android toolchain registration
-          $text = $text -replace '(?m)^(.*register_toolchains\(.*androidndk.*)$', '# $1'
+          $text = $text -replace `
+            '(?s)android_sdk_repository\s*\([^)]*\)', `
+            '# android_sdk_repository disabled'
 
-          # Remove ALL sha256 fields
-          $text = $text -replace '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', ''
+          # Disable Android toolchains
+          $text = $text -replace `
+            '(?m)^.*register_toolchains\(.*androidndk.*$', `
+            '# android toolchain disabled'
+
+          # Remove sha256 pinning
+          $text = $text -replace `
+            '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', `
+            ''
 
           Set-Content $path $text
 
           Write-Host ""
-          Write-Host "Remaining sha256 entries:"
-          Select-String -Path $path -Pattern "sha256"
+          Write-Host "Remaining sha256:"
+          Select-String `
+            -Path $path `
+            -Pattern "sha256"
+
+      - name: Configure Bazel
+        shell: powershell
+        run: |
+          @"
+build --windows_enable_symlinks
+build --linkopt=/LARGEADDRESSAWARE
+build --jobs=2
+"@ | Out-File .bazelrc -Encoding ascii
 
       - name: Build LiteRT-LM C API
         shell: powershell
@@ -78,43 +125,39 @@ jobs:
             build //c:litert-lm `
             --config=windows `
             --build_tag_filters=-android `
-            --extra_toolchains= `
             --verbose_failures `
             --subcommands `
             --sandbox_debug `
-            --keep_going `
-            --announce_rc `
-            --experimental_ui_debug_all_events
+            --announce_rc
 
-      - name: Dump Bazel Logs
+      - name: Dump Bazel Failure Logs
         if: failure()
         shell: powershell
         run: |
-          Write-Host "========== Searching Bazel Output =========="
-
-          if (Test-Path "bazel-out") {
-            Get-ChildItem bazel-out -Recurse -ErrorAction SilentlyContinue |
-              Where-Object {
-                $_.Extension -match "log|txt|stderr|stdout"
-              } |
-              ForEach-Object {
-                Write-Host ""
-                Write-Host "===== $($_.FullName) ====="
-                Get-Content $_.FullName -ErrorAction SilentlyContinue
-              }
-          }
-
-      - name: Search for Missing Rust Object
-        if: failure()
-        shell: powershell
-        run: |
-          Write-Host "Searching for generated object files..."
+          Write-Host "========== Bazel output =========="
 
           Get-ChildItem C:\b -Recurse -ErrorAction SilentlyContinue |
-            Where-Object {
-              $_.Name -like "*cargo_toml_variable_extractor*"
-            } |
-            Select-Object FullName
+          Where-Object {
+            $_.Extension -match "log|txt|stderr|stdout"
+          } |
+          ForEach-Object {
+            Write-Host ""
+            Write-Host "===== $($_.FullName) ====="
+            Get-Content $_.FullName -ErrorAction SilentlyContinue
+          }
+
+      - name: Search Build Tree
+        if: failure()
+        shell: powershell
+        run: |
+          Write-Host "Searching for linker inputs..."
+
+          Get-ChildItem C:\b -Recurse -ErrorAction SilentlyContinue |
+          Where-Object {
+            $_.Extension -match "lib|obj|dll"
+          } |
+          Select-Object FullName |
+          Select-Object -First 200
 
       - name: Locate Build Output
         shell: powershell
@@ -130,7 +173,10 @@ jobs:
       - name: Collect Binaries
         shell: powershell
         run: |
-          New-Item -ItemType Directory -Force -Path output
+          New-Item `
+            -ItemType Directory `
+            -Force `
+            -Path output
 
           Copy-Item `
             bazel-bin\c\*.dll `
@@ -142,12 +188,14 @@ jobs:
             output\ `
             -ErrorAction SilentlyContinue
 
-          Copy-Item `
-            prebuilt\windows_x86_64\*.dll `
-            output\ `
-            -ErrorAction SilentlyContinue
+          if (Test-Path prebuilt\windows_x86_64) {
+            Copy-Item `
+              prebuilt\windows_x86_64\*.dll `
+              output\ `
+              -ErrorAction SilentlyContinue
+          }
 
-          Write-Host "Collected files:"
+          Write-Host "Collected:"
           Get-ChildItem output
 
       - name: Upload Windows Binaries
