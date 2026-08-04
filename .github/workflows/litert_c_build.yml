@@ -107,10 +107,12 @@ jobs:
       - name: Configure Bazel
         shell: powershell
         run: |
+          # Define 'windows' config section and append build flags to .bazelrc
           @(
+            "build:windows --enable_runfiles"
             "build --linkopt=/LARGEADDRESSAWARE"
             "build --jobs=2"
-          ) | Out-File -FilePath .bazelrc -Encoding ascii
+          ) | Add-Content -Path .bazelrc -Encoding ascii
 
       - name: Build LiteRT-LM C API
         shell: powershell
