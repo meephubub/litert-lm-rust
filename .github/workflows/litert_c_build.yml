@@ -41,6 +41,11 @@ jobs:
           where.exe cl
           where.exe link
 
+      - name: Patch minizip URL in WORKSPACE
+        shell: powershell
+        run: |
+          (Get-Content WORKSPACE) -replace 'url = "https://zlib.net"', 'urls = ["https://github.com", "https://zlib.net"]' | Set-Content WORKSPACE
+
       - name: Patch WORKSPACE Dependencies
         shell: powershell
         run: |
