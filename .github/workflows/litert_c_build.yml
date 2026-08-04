@@ -126,7 +126,7 @@ jobs:
             --verbose_failures `
             --subcommands `
             --sandbox_debug `
-            --announce_rc`
+            --announce_rc `
 
       - name: Dump Bazel Failure Logs
         if: failure()
