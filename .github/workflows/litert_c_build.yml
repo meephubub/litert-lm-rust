@@ -19,6 +19,9 @@ jobs:
         with:
           repository: google-ai-edge/LiteRT-LM
 
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
       - name: Setup Bazelisk
         uses: bazelbuild/setup-bazelisk@v3
 
