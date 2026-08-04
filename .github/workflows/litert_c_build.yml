@@ -53,10 +53,6 @@ jobs:
           Write-Host "Selected linker:"
           Get-Command link.exe | Format-List *
 
-          Write-Host ""
-          Write-Host "Linker version:"
-          link.exe /?
-
       - name: Patch minizip URL in WORKSPACE
         shell: powershell
         run: |
