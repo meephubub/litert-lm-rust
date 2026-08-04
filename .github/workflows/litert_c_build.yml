@@ -111,11 +111,11 @@ jobs:
       - name: Configure Bazel
         shell: powershell
         run: |
-          @"
-build --windows_enable_symlinks
-build --linkopt=/LARGEADDRESSAWARE
-build --jobs=2
-"@ | Out-File .bazelrc -Encoding ascii
+          @(
+            "build --windows_enable_symlinks"
+            "build --linkopt=/LARGEADDRESSAWARE"
+            "build --jobs=2"
+          ) | Out-File -FilePath .bazelrc -Encoding ascii
 
       - name: Build LiteRT-LM C API
         shell: powershell
