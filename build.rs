@@ -62,16 +62,16 @@ fn main() {
     // ── Attempt download if feature enabled ────────────────────────────────
     #[cfg(feature = "download-native")]
     {
-        let prebuilt_dir = manifest_dir.join("prebuilt");
+        let prebuilt_dir = out_dir.join("prebuilt");
         if !prebuilt_dir.exists() || !has_required_files(&prebuilt_dir) {
             println!("cargo:warning=Native libraries not found, attempting download...");
-            if let Err(e) = download_native_libraries(&manifest_dir) {
+            if let Err(e) = download_native_libraries(&prebuilt_dir) {
                 println!("cargo:warning=Failed to download native libraries: {}", e);
             }
         }
     }
 
-    link_native_library(&manifest_dir);
+    link_native_library(&manifest_dir, &out_dir);
 }
 
 // ── Bindgen (optional feature) ────────────────────────────────────────────────
@@ -110,10 +110,11 @@ fn default_lib_names() -> Vec<String> {
     ]
 }
 
-fn link_native_library(manifest_dir: &PathBuf) {
+fn link_native_library(manifest_dir: &PathBuf, out_dir: &PathBuf) {
     // ── Resolve candidate directories ─────────────────────────────────────────
     let search_dirs: Vec<PathBuf> = [
         env::var_os("LITERT_LM_LIB_DIR").map(PathBuf::from),
+        Some(out_dir.join("prebuilt")), // Downloaded libraries go here
         Some(manifest_dir.join("prebuilt")),
         Some(manifest_dir.join("native")),
         Some(manifest_dir.join("c")),
@@ -236,9 +237,8 @@ fn has_required_files(prebuilt_dir: &PathBuf) -> bool {
 }
 
 #[cfg(feature = "download-native")]
-fn download_native_libraries(manifest_dir: &PathBuf) -> Result<(), String> {
-    let prebuilt_dir = manifest_dir.join("prebuilt");
-    fs::create_dir_all(&prebuilt_dir).map_err(|e| format!("Failed to create prebuilt directory: {}", e))?;
+fn download_native_libraries(prebuilt_dir: &PathBuf) -> Result<(), String> {
+    fs::create_dir_all(prebuilt_dir).map_err(|e| format!("Failed to create prebuilt directory: {}", e))?;
 
     let base_url = "https://github.com/meephubub/litert-lm-rust/releases/download/v0.1.0";
     let files = [
