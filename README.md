@@ -18,7 +18,7 @@ This crate wraps the stable **C API** (`c/engine.h`), which is the supported FFI
 
 ```toml
 [dependencies]
-litert-lm-rust = "0.2.1"
+litert-lm-rust = "0.2.2"
 ```
 
 The crate will automatically download the required native libraries from GitHub releases on first build (Windows only). No manual setup is required for most use cases.

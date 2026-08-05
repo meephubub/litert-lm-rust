@@ -37,7 +37,7 @@ LiteRT-LM Rust bindings provide a safe, ergonomic interface to the LiteRT-LM C A
 
 ```toml
 [dependencies]
-litert-lm-rust = "0.13"
+litert-lm-rust = "0.2.2"
 ```
 
 The crate will automatically download the required native libraries from GitHub releases on first build (Windows only).
@@ -48,7 +48,7 @@ If you prefer to provide your own native libraries:
 
 ```toml
 [dependencies]
-litert-lm-rust = { version = "0.13", default-features = false }
+litert-lm-rust = { version = "0.2.2", default-features = false }
 ```
 
 Then set the `LITERT_LM_LIB_DIR` environment variable to point to your library directory.
