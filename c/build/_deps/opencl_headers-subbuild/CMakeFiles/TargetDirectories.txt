@@ -1,3 +1,0 @@
-C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/opencl_headers-populate.dir
-C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/ALL_BUILD.dir
-C:/Users/marcn/Desktop/litert-lm-rust/c/build/_deps/opencl_headers-subbuild/CMakeFiles/ZERO_CHECK.dir

@@ -21,7 +21,7 @@ This crate wraps the stable **C API** (`c/engine.h`), which is the supported FFI
 litert-lm-rust = "0.13"
 ```
 
-You must also link a built LiteRT-LM C shared library (see below).
+The crate will automatically download the required native libraries from GitHub releases on first build (Windows only). No manual setup is required for most use cases.
 
 ## Quick start
 
@@ -68,7 +68,24 @@ let engine = Engine::builder("model.litertlm")
 
 ## Native library
 
-Build the LiteRT-LM C API from source:
+### Automatic Download (Windows - Recommended)
+
+The crate includes a `download-native` feature (enabled by default) that automatically downloads the required native libraries from GitHub releases on first build. The native libraries are built from the LiteRT-LM source using a GitHub Actions workflow and published as release assets.
+
+**Downloaded files:**
+- `litert-lm.dll` - Main LiteRT-LM library
+- `litert-lm.if.lib` - Import library for linking
+- `libLiteRt.dll` - LiteRT runtime library
+- `libGemmaModelConstraintProvider.dll` - Gemma constraint provider
+- `libLiteRtTopKWebGpuSampler.dll` - WebGPU sampler
+- `libLiteRtWebGpuAccelerator.dll` - WebGPU accelerator
+- `libwebgpu_dawn.dll` - Dawn WebGPU implementation
+
+These libraries are automatically downloaded to the crate's `prebuilt/` directory during the first build. No manual setup is required.
+
+### Manual Setup
+
+If you prefer to build the LiteRT-LM C API from source:
 
 ```bash
 git clone https://github.com/google-ai-edge/LiteRT-LM
@@ -97,7 +114,14 @@ Alternatively, place the shared library in this crate's `c/`, `native/`, or `pre
 | `LITERT_LM_LIB_NAME` | Library name without `lib` / extension (default tries `LiteRtLmC` / `engine`) |
 | `LITERT_LM_STATIC` | If set, link statically |
 | `LITERT_LM_INCLUDE_DIR` | Override header path (defaults to vendored `c/`) |
-### Using pre‑built Windows binaries
+
+**Note:** To disable automatic download and use your own libraries, add `default-features = false` to your Cargo.toml:
+```toml
+[dependencies]
+litert-lm-rust = { version = "0.13", default-features = false }
+```
+
+### Legacy pre‑built Windows binaries
 
 If you have the pre‑built LiteRT‑LM binaries (from the `LiteRT-LM/prebuilt/windows_x86_64` folder of the `litert‑lm‑rust` repository) you can avoid building from source.
 

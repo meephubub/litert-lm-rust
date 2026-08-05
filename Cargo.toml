@@ -30,11 +30,13 @@ targets = ["x86_64-unknown-linux-gnu"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
-default = []
+default = ["download-native"]
 # Skip linking the native LiteRT-LM library (for docs.rs / typecheck without a local build).
 docs-only = []
 # Regenerate FFI bindings with bindgen at build time (requires libclang).
 bindgen = ["dep:bindgen"]
+# Automatically download native libraries from GitHub releases if not found locally.
+download-native = ["dep:ureq"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
@@ -44,6 +46,7 @@ base64 = "0.22"
 
 [build-dependencies]
 bindgen = { version = "0.71", optional = true }
+ureq = { version = "2", optional = true }
 
 [[example]]
 name = "text_chat"

@@ -15,3 +15,5 @@ prebuilt/
 c/build/
 litert_artifacts/
 logs/
+dumpbin_litert_dll
+gemma-4-E2B-it.litertlm
