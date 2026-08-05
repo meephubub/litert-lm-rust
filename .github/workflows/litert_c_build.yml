@@ -15,9 +15,7 @@ jobs:
             -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' `
             -Name 'LongPathsEnabled' `
             -Value 1
-
           git config --system core.longpaths true
-
       - name: Checkout LiteRT-LM
         uses: actions/checkout@v4
         with:
@@ -39,72 +37,54 @@ jobs:
           bazelisk version
           rustc --version
           cargo --version
-
           Write-Host ""
           Write-Host "=== Tool Resolution ==="
-
           Write-Host "cl.exe:"
           where.exe cl
-
           Write-Host ""
           Write-Host "link.exe:"
           where.exe link
-
           Write-Host ""
           Write-Host "Selected linker:"
           Get-Command link.exe | Format-List *
-
       - name: Patch minizip URL in WORKSPACE
         shell: powershell
         run: |
           $path = "WORKSPACE"
-
           if (Test-Path $path) {
             $text = Get-Content $path -Raw
-
             $text = $text -replace `
               'url = "https://zlib.net"', `
               'urls = ["https://github.com", "https://zlib.net"]'
-
             Set-Content $path $text
           }
-
       - name: Patch WORKSPACE Dependencies
         shell: powershell
         run: |
           $path = "WORKSPACE"
-
           Write-Host "Patching WORKSPACE..."
-
           $text = Get-Content $path -Raw
-
           # Disable Android repositories
           $text = $text -replace `
             '(?s)android_ndk_repository\s*\([^)]*\)', `
             '# android_ndk_repository disabled'
-
           $text = $text -replace `
             '(?s)android_sdk_repository\s*\([^)]*\)', `
             '# android_sdk_repository disabled'
-
           # Disable Android toolchains
           $text = $text -replace `
             '(?m)^.*register_toolchains\(.*androidndk.*$', `
             '# android toolchain disabled'
-
           # Remove sha256 pinning
           $text = $text -replace `
             '(?m)^\s*sha256\s*=\s*"[^"]*",?\r?\n', `
             ''
-
           Set-Content $path $text
-
           Write-Host ""
           Write-Host "Remaining sha256:"
           Select-String `
             -Path $path `
             -Pattern "sha256"
-
       - name: Configure Bazel
         shell: powershell
         run: |
@@ -114,7 +94,6 @@ jobs:
             "build --linkopt=/LARGEADDRESSAWARE"
             "build --jobs=2"
           ) | Add-Content -Path .bazelrc -Encoding ascii
-
       - name: Build LiteRT-LM C API
         shell: powershell
         run: |
@@ -126,14 +105,12 @@ jobs:
             --verbose_failures `
             --subcommands `
             --sandbox_debug `
-            --announce_rc`
-
+            --announce_rc `
       - name: Dump Bazel Failure Logs
         if: failure()
         shell: powershell
         run: |
           Write-Host "========== Bazel output =========="
-
           Get-ChildItem C:\b -Recurse -ErrorAction SilentlyContinue |
           Where-Object {
             $_.Extension -match "log|txt|stderr|stdout"
@@ -143,31 +120,26 @@ jobs:
             Write-Host "===== $($_.FullName) ====="
             Get-Content $_.FullName -ErrorAction SilentlyContinue
           }
-
       - name: Search Build Tree
         if: failure()
         shell: powershell
         run: |
           Write-Host "Searching for linker inputs..."
-
           Get-ChildItem C:\b -Recurse -ErrorAction SilentlyContinue |
           Where-Object {
             $_.Extension -match "lib|obj|dll"
           } |
           Select-Object FullName |
           Select-Object -First 200
-
       - name: Locate Build Output
         shell: powershell
         run: |
           Write-Host "Searching bazel-bin..."
-
           Get-ChildItem `
             -Recurse `
             bazel-bin `
             -Include *.dll,*.lib `
             -ErrorAction SilentlyContinue
-
       - name: Collect Binaries
         shell: powershell
         run: |
@@ -175,27 +147,22 @@ jobs:
             -ItemType Directory `
             -Force `
             -Path output
-
           Copy-Item `
             bazel-bin\c\*.dll `
             output\ `
             -ErrorAction SilentlyContinue
-
           Copy-Item `
             bazel-bin\c\*.lib `
             output\ `
             -ErrorAction SilentlyContinue
-
           if (Test-Path prebuilt\windows_x86_64) {
             Copy-Item `
               prebuilt\windows_x86_64\*.dll `
               output\ `
               -ErrorAction SilentlyContinue
           }
-
           Write-Host "Collected:"
           Get-ChildItem output
-
       - name: Upload Windows Binaries
         uses: actions/upload-artifact@v4
         with:
